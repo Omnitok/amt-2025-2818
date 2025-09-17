@@ -29,8 +29,8 @@ epochs = 20
 
 
 early_stopping = EarlyStopping(
-            monitor="loss",
-            patience=20,
+            monitor="val_loss",
+            patience=10,
             mode="min", # Stop when the monitored quantity stops decreasing
             verbose=1, # Display log messages when early stopping is triggered
             restore_best_weights=True # REstore the model weights from the epoch with the best value of the monitored quality
@@ -43,7 +43,7 @@ def main(args):
     # Build model
     # model = get_model(img_size, num_classes)
     model = sm.Linknet(
-        "resnet50",
+        "efficientnetb7",
         input_shape=(model_size[0], model_size[1], 1),
         classes=num_classes,
         activation="sigmoid",
@@ -71,7 +71,7 @@ def main(args):
 
     model.compile(
         optimizer="adam",
-        loss=binary_losses.binary_tversky_loss(beta=0.5),  # increase recall
+        loss=binary_losses.binary_tversky_loss(beta=0.7),  # increase recall
         metrics=[metrics.accuracy, metrics.fp, metrics.recall, metrics.prec],
     )
     input_signature = (

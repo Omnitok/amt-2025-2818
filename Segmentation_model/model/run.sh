@@ -17,5 +17,5 @@ docker  run \
         -p 8888:8888 \
         --name trainer \
         --rm \
-        cuda-tensorflow /bin/bash -c "python3 ${PWD}/model/train.py --data_folder $TMP_DATA_FOLDER --output_folder $PWD/out/test"
+        cuda-tensorflow /bin/bash -c "python3 ${PWD}/model/train_lowb.py --data_folder $TMP_DATA_FOLDER --output_folder $PWD/out/test"
 
