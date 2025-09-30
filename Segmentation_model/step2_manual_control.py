@@ -1,3 +1,8 @@
+"""
+Step 2: Shows the segmented mask images on top of the original image recorded by the B-ICI.
+The user has the option to accept, correct or skip the image. 
+"""
+
 import cv2
 import numpy as np
 import os

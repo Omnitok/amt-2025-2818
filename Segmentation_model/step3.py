@@ -1,5 +1,5 @@
 """""""""
-This script is created to evaluate the converted "*.png" images from the B-ICI instrument.
+Step 3 crops the segmented images from the B-ICI instrument.
 Creates a txt file with the output of:
 name of the particle
 AR - aspect ratio
@@ -24,25 +24,9 @@ from pathlib import Path
 import math
 import shutil
 
-#input_folder = Path("/home/stejan/snow_crystal_segmentation/data/cropped_/batch_1/cropped_original_png")
-#input_folder = Path("/home/stejan/snow_crystal_segmentation/ltu24")
-input_folder = Path("/home/stejan/snow_crystal_segmentation/LTU21")
-#input_folder = Path("/home/stejan/snow_crystal_segmentation/20160212")
-
-contour_folder = Path("/home/stejan/snow_crystal_segmentation/step2_output/ltu21/cropped_contours/")
-#contour_folder = Path("/home/stejan/snow_crystal_segmentation/data/cropped_/batch_1/cropped_contours_binary")
-#contour_folder = Path("/home/stejan/snow_crystal_segmentation/step2_output/training_data/cropped_contours")
-#contour_folder = Path("/home/stejan/snow_crystal_segmentation/step2_output/ltu22/cropped_contours/")
-#contour_folder = Path("/home/stejan/Downloads/ltu23/mask/")
-#contour_folder = Path("/home/stejan/hand_analyzed/ltu22_binary")
-#contour_folder = Path("/home/stejan/snow_crystal_segmentation/scs_out/ltu22_m330_07/mask")
-
-output_folder = Path("/home/stejan/snow_crystal_segmentation/step3_output/ltu21")
-#output_folder = Path("/home/stejan/snow_crystal_segmentation/step3_output/ltu22")
-#output_folder = Path("/home/stejan/snow_crystal_segmentation/step3_output/20160212")
-#output_folder = Path("/home/stejan/snow_crystal_segmentation/step3_output/training_data")
-#output_folder = Path("/home/stejan/test/hand_analyzed")
-#output_folder = Path("/home/stejan/test/ml_analyzed")
+input_folder = Path("/amt-2025-2018/Segmentation_model/<INPUT_FOLDER>")
+contour_folder = Path("/amt-2025-2018/Segmentation_model/<CONTOUR_FOLDER>")
+output_folder = Path("/amt-2025-2018/Segmentation_model/<OUTPUT_FOLDER>")
 
 debug = 0 
 px_res = 1.65
