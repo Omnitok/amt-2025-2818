@@ -13,7 +13,7 @@ from pathlib import Path
 # Folder paths
 original_folder = Path("/amt-2025-2818/Segmentation_model/<ORIGINAL FOLDER>")
 contour_folder = Path("/amt-2025-2818/Segmentation_model/step1_output/<FOLDER NAME>/mask")
-output_folder = Path("/amt-2025-2818/Segmentatuin_model/step2_output/<FOLDER NAME>/")
+output_folder = Path("/amt-2025-2818/Segmentation_model/step2_output/<FOLDER NAME>/")
 
 ## Get image lists (assuming they have the same names)
 # read in the model name that is an extra suffix on the contour images

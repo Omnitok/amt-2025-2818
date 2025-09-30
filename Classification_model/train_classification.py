@@ -17,7 +17,6 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.metrics import Precision, Recall
 from tensorflow.keras.utils import image_dataset_from_directory
 
-# DO I NEED THIS IN ORDER TO USE THE PRETRAINED CNN-S?
 import os
 os.environ["SM_FRAMEWORK"] = "tf.keras"
 
