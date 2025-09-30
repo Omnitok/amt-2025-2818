@@ -1,5 +1,6 @@
 """
-Step 2: Shows the segmented mask images on top of the original image recorded by the B-ICI.
+Step 2: Visual inspection step.
+Shows the segmented mask images on top of the original image recorded by the B-ICI.
 The user has the option to accept, correct or skip the image. 
 """
 
