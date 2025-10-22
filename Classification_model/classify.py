@@ -173,7 +173,7 @@ for root, dirs, files in os.walk(crystal_path):
         title_lines = (["{} ({:.2f}%)".format(c, 100 * s) for c, s in zip(all_classes, all_confidences)])
         title = "\n".join(title_lines)
         plt.title(title)
-        save_path = save_dir + filename
+        save_path = os.path.join(save_dir, filename)
         save_path2 = save_dir + "circle_" + filename
         plt.savefig(save_path, bbox_inches="tight", dpi=300)
         plt.close()
